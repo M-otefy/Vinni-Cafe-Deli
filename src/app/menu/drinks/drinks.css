@@ -1,0 +1,443 @@
+/* ===================== Hot Drinks Section ===================== */
+.hot-drinks-section {
+  position: relative;
+
+  .hot-drinks-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .drinks-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    font-size: 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .drinks-list li.small {
+    font-size: 14px;
+    border: none;
+    opacity: 0.85;
+    padding-left: 12px;
+  }
+}
+
+.hot-drinks-section h2 {
+  color: #ed2127;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 32px;
+}
+
+.hot-drinks-section span {
+  color: #f1e6dd;
+  /* font-weight: 400; */
+  font-size: 18px;
+}
+.hot-drinks-section p{
+  font-size: 12px;
+}
+
+.drinks-list li i {
+  margin-right: 10px;
+  color: #e4c28b;
+}
+
+
+.tax {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.tax span {
+  font-size: 14px;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* cocktails Drinks Section  */
+.cocktails-section {
+  position: relative;
+  padding: 60px 0;
+}
+.cocktails-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.cocktails-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.cocktails-section .container {
+  position: relative;
+  z-index: 2;
+}
+.cocktails-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 1.1rem;
+}
+
+.cocktails-list li i {
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+
+.cocktail-name {
+  flex: 1;
+}
+.cocktails-section h2 {
+  color: #ed2127;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 32px;
+}
+.cocktails-section span {
+  color: #f1e6dd;
+}
+.cocktail-price {
+  font-weight: 600;
+  color: #f1e6dd;
+}
+
+/* gallery */
+
+.gallery-card {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+.gallery-card img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+.gallery-card:hover {
+  transform: scale(1.05);
+}
+
+/* soft drinks */
+
+.softdrinks-section {
+  position: relative;
+  padding: 60px 0;
+}
+.softdrinks-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.softdrinks-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.softdrinks-section .container {
+  position: relative;
+  z-index: 2;
+}
+.softdrinks-section h2 {
+  color: #ed2127;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 32px;
+}
+.softdrinks-section span {
+  color: #f1e6dd;
+}
+.softdrinks-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 1.1rem;
+}
+
+.softdrinks-list li i {
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+
+.drink-name {
+  flex: 1;
+}
+
+/* freshjuices */
+.freshjuices-section {
+  position: relative;
+  padding: 60px 0;
+}
+.freshjuices-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.freshjuices-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.freshjuices-section .container {
+  position: relative;
+  z-index: 2;
+}
+.freshjuices-section h2 {
+  color: #ed2127;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 32px;
+}
+.freshjuices-section span {
+  color: #f1e6dd;
+}
+.freshjuices-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 1.1rem;
+}
+
+.freshjuices-list li i {
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+.juice-name {
+  flex: 1;
+}
+
+/* smoothies */
+
+.size {
+  display: flex;
+  flex: 2;
+}
+
+.smoothies-section {
+  position: relative;
+  padding: 60px 0;
+}
+.smoothies-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.smoothies-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.smoothies-section .container {
+  position: relative;
+  z-index: 2;
+}
+.smoothies-section h2 {
+  color: #ed2127;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 32px;
+}
+.smoothies-section span {
+  color: #f1e6dd;
+}
+
+.smoothies-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 1.1rem;
+}
+
+.smoothies-list li i {
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+
+.smoothie-name {
+  flex: 1;
+}
+
+/* Shakes */
+
+.shakes-section {
+  position: relative;
+  padding: 60px 0;
+}
+.shakes-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.shakes-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.shakes-section .container {
+  position: relative;
+  z-index: 2;
+}
+.shakes-section h2 {
+  color: #ed2127;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 32px;
+}
+.shakes-section span {
+  color: #f1e6dd;
+}
+.shakes-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 1.1rem;
+}
+
+.shakes-list li i {
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+
+.shake-name {
+  flex: 1;
+}
+
+/* ieced drinks */
+
+.iced-section {
+  position: relative;
+  padding: 60px 0;
+}
+.iced-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.iced-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.iced-section .container {
+  position: relative;
+  z-index: 2;
+}
+.iced-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 1.1rem;
+}
+
+.iced-list li i {
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+.iced-section h2 {
+  color: #ed2127;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 32px;
+}
+.iced-section span {
+  color: #f1e6dd;
+}
+
+.iced-name {
+  flex: 1;
+}

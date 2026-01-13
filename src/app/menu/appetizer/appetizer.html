@@ -1,0 +1,69 @@
+<section class="appetizer-section py-5 mb-3 mt-5">
+  <div class="overlay"></div>
+  <img src="/BackGround/24.png" class="appetizer-bg" loading="lazy">
+
+  <div class="container">
+
+    <h2 class="text-center mb-3">
+      {{ langService.currentLang === 'en' ? 'Appetizers' : 'المقبلات' }}
+    </h2>
+
+    <p class="text-center" style="font-size: 22px;">
+      {{ langService.currentLang === 'en'
+      ? 'Ahhh Appetizers!!! Just take a moment & appreciate whoever invented eating before eating.'
+      : 'آه يا للمقبلات! لحظة تقدير لمن اخترع الأكل قبل الأكل.'
+      }}
+    </p>
+
+    <div class="row justify-content-center g-4">
+      @for (item of appetizers; track item) {
+        <div class="col-sm-12 col-md-6 col-lg-4 d-flex">
+          <div class="card border-2 menu-card">
+            <img [src]="item.img" class="card-img" loading="lazy">
+            <div class="card-body">
+              <h5 class="card-title">
+                {{ langService.currentLang === 'en' ? item.titleEn : item.titleAr }}
+              </h5>
+              <p class="desc">
+                {{ langService.currentLang === 'en' ? item.descEn : item.descAr }}
+              </p>
+            </div>
+            <span class="price">
+              {{ langService.currentLang === 'en' ? item.priceEn : item.priceAr }}
+            </span>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+
+  <!-- Add-ons -->
+  <div class="addons container py-5">
+    <h4>
+      {{ langService.currentLang === 'en' ? 'Add-ons' : 'إضافات' }}
+    </h4>
+
+    <div class="row g-4">
+      @for (add of addons; track add) {
+        <div class="col-4">
+          <div class="addon-item text-center">
+            <img [src]="add.img">
+            <h6>
+              {{ langService.currentLang === 'en' ? add.titleEn : add.titleAr }}
+            </h6>
+            <span class="price">{{ langService.currentLang === 'en' ? add.priceEn : add.priceAr }}</span>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+
+  <div class="container tax">
+    <span>
+      {{ langService.currentLang === 'en'
+      ? 'Add %12 service charge + %14 value-added tax'
+      : 'يُضاف 12% خدمة + 14% ضريبة قيمة مضافة'
+      }}
+    </span>
+  </div>
+</section>

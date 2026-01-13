@@ -1,0 +1,396 @@
+<section class="drinks-gallery py-5 mt-5">
+  <div class="container">
+    <!-- <h2 class="text-center mb-5">Gallery</h2> -->
+    <div class="row g-4">
+
+      <div class="col-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="gallery-card">
+          <img src="/BackGround/animations/154A3689.jpg" alt="Drink 2">
+        </div>
+      </div>
+
+      <div class="col-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="gallery-card">
+          <img src="/BackGround/animations/154A3197.jpg" alt="Drink 3">
+        </div>
+      </div>
+      <div class="col-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="gallery-card">
+          <img src="/BackGround/animations/154A3355.jpg" alt="Drink 3">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hot-drinks-section py-5 mb-5" id="hot-drinks">
+  <div class="overlay"></div>
+  <img src="/BackGround/154A3671.jpg" alt="" class="hot-drinks-bg" loading="lazy">
+
+  <div class="container text-white">
+
+    <p class="text-center mb-3" style="opacity:.9; font-size:18px;">
+      {{ LanguageService.currentLang === 'en' ? 'One Sip is All You Need!' : 'جرعة واحدة تكفي!' }}
+    </p>
+
+    <h2 class="text-center mb-4">
+      <i class="fas fa-mug-hot me-2"></i>
+      {{ LanguageService.currentLang === 'en' ? 'Hot Drinks' : 'المشروبات الساخنة' }}
+    </h2>
+
+    <ul class="drinks-list list-unstyled">
+      @for (drink of hotDrinks; track drink) {
+        <li>
+          <div>
+            <span>{{ LanguageService.currentLang === 'en' ? drink.nameEn : drink.nameAr }}</span>
+            @if (LanguageService.currentLang === 'en' && drink.flavorsEn) {
+              <p class="small ms-3">{{ drink.flavorsEn }}
+              </p>
+            }
+            @if (LanguageService.currentLang === 'ar' && drink.flavorsAr) {
+              <p class="small ms-3">{{ drink.flavorsAr }}
+              </p>
+            }
+          </div>
+          <span>{{ LanguageService.currentLang === 'en' ? drink.priceEn : drink.priceAr }}</span>
+        </li>
+      }
+    </ul>
+
+  </div>
+
+  <div class="container tax">
+    <span>
+      {{ LanguageService.currentLang === 'en'
+      ? 'Add %12 service charge + %14 value-added tax'
+      : 'يُضاف 12% خدمة + 14% ضريبة قيمة مضافة'
+      }}
+    </span>
+  </div>
+</section>
+
+
+
+
+<!-- cocktails drinks -->
+<section class="drinks-gallery py-5">
+  <div class="container">
+    <!-- <h2 class="text-center mb-5">Gallery</h2> -->
+    <div class="row g-4">
+
+      <div class="col-4" data-aos="fade-up" data-aos-delay="400">
+        <div class="gallery-card">
+          <img src="/BackGround/animations/154A3748.jpg" alt="Drink 5">
+        </div>
+      </div>
+
+      <div class="col-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="gallery-card">
+          <img src="/BackGround/animations/IMG_0006.jpg" alt="Drink 4">
+        </div>
+      </div>
+
+      <div class="col-4" data-aos="fade-up" data-aos-delay="500">
+        <div class="gallery-card">
+          <img src="/BackGround/animations/154A3753.jpg" alt="Drink 6">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cocktails-section py-5" id="cocktails">
+  <div class="overlay"></div>
+  <img src="/BackGround/154A3748.jpg" alt="Cocktails Background" class="cocktails-bg" loading="lazy">
+
+  <div class="container">
+    <div class="cocktails-tagline text-center mb-4" style="color: #f1e6dd;">
+      {{ LanguageService.currentLang === 'en' ? 'Fresh & Fruity Cocktails!' : 'كوكتيلات طازجة وفواكه!' }}
+    </div>
+
+    <h2 class="text-center mb-4">
+      <i class="fas fa-cocktail me-2"></i>
+      {{ LanguageService.currentLang === 'en' ? 'Cocktails' : 'الكوكتيلات' }}
+    </h2>
+
+    <ul class="cocktails-list list-unstyled">
+      @for (cocktail of cocktails; track cocktail) {
+        <li>
+          <span>{{ LanguageService.currentLang === 'en' ? cocktail.nameEn : cocktail.nameAr }}</span>
+          <span>{{ LanguageService.currentLang === 'en' ? cocktail.priceEn : cocktail.priceAr }}</span>
+        </li>
+      }
+    </ul>
+  </div>
+
+  <div class="container tax">
+    <span>
+      {{ LanguageService.currentLang === 'en'
+      ? 'Add %12 service charge + % 14 value-added tax'
+      : 'يُضاف 12% خدمة + 14% ضريبة قيمة مضافة' }}
+    </span>
+  </div>
+</section>
+
+
+
+<!-- soft drinks -->
+
+<section class="softdrinks-section py-5 mt-5" id="soft-drinks">
+  <div class="overlay"></div>
+  <img src="/BackGround/154A3213.jpg" alt="Soft Drinks Background" class="softdrinks-bg" loading="lazy">
+
+  <div class="container">
+    <div class="softdrinks-tagline text-center mb-4" style="color: #f1e6dd;">
+      {{ LanguageService.currentLang === 'en' ? 'Refreshing Soft Drinks!' : 'مشروبات غازية منعشة!' }}
+    </div>
+
+    <h2 class="text-center mb-4">
+      <i class="me-2"></i>
+      {{ LanguageService.currentLang === 'en' ? 'Soft Drinks' : 'المشروبات الغازية' }}
+    </h2>
+
+    <ul class="softdrinks-list list-unstyled">
+      @for (drink of softDrinks; track drink) {
+        <li>
+          <span>{{ LanguageService.currentLang === 'en' ? drink.nameEn : drink.nameAr }}</span>
+          <span>{{ LanguageService.currentLang === 'en' ? drink.priceEn : drink.priceAr }}</span>
+        </li>
+      }
+    </ul>
+  </div>
+
+  <div class="container tax">
+    <span>
+      {{ LanguageService.currentLang === 'en'
+      ? 'Add %12 service charge + %14 value-added tax'
+      : 'يُضاف 12% خدمة + 14% ضريبة قيمة مضافة' }}
+    </span>
+  </div>
+</section>
+
+
+
+<section class="freshjuices-section py-5 mt-5" id="fresh-juices">
+  <div class="overlay"></div>
+  <img src="/BackGround/154A3097.jpg" alt="Dessert Background" class="freshjuices-bg" loading="lazy">
+
+  <div class="container">
+    <div class="freshjuices-tagline text-center mb-4 mb-5" style="color: #f1e6dd;">
+      {{ LanguageService.currentLang === 'en' ? 'Fresh & Healthy Juices!' : 'عصائر طازجة وصحية!' }}
+    </div>
+
+    <h2 class="text-center mb-4">
+      <i class="fas fa-wine-glass-alt me-2"></i>
+      {{ LanguageService.currentLang === 'en' ? 'Fresh Juices' : 'العصائر الطازجة' }}
+    </h2>
+
+    <ul class="freshjuices-list list-unstyled">
+      @for (juice of freshJuices; track juice) {
+        <li>
+          <span>{{ LanguageService.currentLang === 'en' ? juice.nameEn : juice.nameAr }}</span>
+          <span>{{ LanguageService.currentLang === 'en' ? juice.priceEn : juice.priceAr }}</span>
+        </li>
+      }
+    </ul>
+  </div>
+
+  <div class="container tax">
+    <span>
+      {{ LanguageService.currentLang === 'en'
+      ? 'Add %12 service charge + % 14 value-added tax'
+      : 'يُضاف 12% خدمة + 14% ضريبة قيمة مضافة'
+      }}
+    </span>
+  </div>
+</section>
+
+
+
+<!-- somthiess -->
+<section class="drinks-gallery py-5 mb-5">
+  <div class="container">
+    <!-- <h2 class="text-center mb-5">Gallery</h2> -->
+    <div class="row g-4">
+
+
+      <div class="col-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="gallery-card">
+          <img src="/BackGround/animations/154A3735.jpg" alt="Drink 1">
+        </div>
+      </div>
+
+
+      <div class="col-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="gallery-card">
+          <img src="/BackGround/animations/IMG_2193.jpg" alt="Drink 4">
+        </div>
+      </div>
+
+      <div class="col-4" data-aos="fade-up" data-aos-delay="500">
+        <div class="gallery-card">
+          <img src="/BackGround/animations/154A3162.jpg" alt="Drink 6">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="smoothies-section py-5 mt-5 mb-5" id="smoothies">
+  <div class="overlay"></div>
+  <img src="/BackGround/animations/154A3525.jpg" alt="Dessert Background" class="smoothies-bg" loading="lazy">
+
+  <div class="container">
+    <div class="smoothies-tagline text-center mb-4" style="color: #f1e6dd;">
+      {{ LanguageService.currentLang === 'en' ? 'Delicious Smoothies!' : 'سموزيز لذيذة!' }}
+    </div>
+
+    <h2 class="text-center mb-4"><i class="me-2"></i>
+    {{ LanguageService.currentLang === 'en' ? 'Smoothies' : 'سموزيز' }}
+  </h2>
+
+  <ul class="smoothies-list list-unstyled">
+    @for (smoothie of smoothies; track smoothie) {
+      <li>
+        <span>{{ LanguageService.currentLang === 'en' ? smoothie.nameEn : smoothie.nameAr }}</span>
+        <span>{{ LanguageService.currentLang === 'en' ? smoothie.priceEn : smoothie.priceAr }}</span>
+      </li>
+    }
+  </ul>
+</div>
+
+<div class="container tax">
+  <span>
+    {{ LanguageService.currentLang === 'en'
+    ? 'Add %12 service charge + % 14 value-added tax'
+    : 'يُضاف 12% خدمة + 14% ضريبة قيمة مضافة'
+    }}
+  </span>
+</div>
+</section>
+
+
+<!-- Shakes -->
+
+<section class="drinks-gallery py-5">
+  <div class="container">
+    <div class="row g-4">
+
+      <div class="col-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="gallery-card">
+          <img src="/BackGround/animations/154A3143.jpg" alt="Drink 1">
+        </div>
+      </div>
+
+
+      <div class="col-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="gallery-card">
+          <img src="/BackGround/animations/154A3146.jpg" alt="Drink 4">
+        </div>
+      </div>
+
+      <div class="col-4" data-aos="fade-up" data-aos-delay="500">
+        <div class="gallery-card">
+          <img src="/BackGround/animations/154A3360.jpg" alt="Drink 6">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="shakes-section py-5 mt-5" id="shakes">
+  <div class="overlay"></div>
+  <img src="/BackGround/animations/154A3159.jpg" alt="Dessert Background" class="shakes-bg" loading="lazy">
+
+  <div class="container">
+    <div class="shakes-tagline text-center mb-4" style="color: #f1e6dd;">
+      {{ LanguageService.currentLang === 'en' ? 'Indulge in Our Creamy Shakes!' : 'استمتع بالميلك شيك الكريمي!' }}
+    </div>
+
+    <h2 class="text-center mb-4"><i class="me-2"></i>
+    {{ LanguageService.currentLang === 'en' ? 'Shakes' : 'ميلك شيك' }}
+  </h2>
+
+  <ul class="shakes-list list-unstyled">
+    @for (shake of shakes; track shake) {
+      <li>
+        <span>{{ LanguageService.currentLang === 'en' ? shake.nameEn : shake.nameAr }}</span>
+        <span>{{ LanguageService.currentLang === 'en' ? shake.priceEn : shake.priceAr }}</span>
+      </li>
+    }
+  </ul>
+</div>
+
+<div class="container tax">
+  <span>
+    {{ LanguageService.currentLang === 'en'
+    ? 'Add %12 service charge + % 14 value-added tax'
+    : 'يُضاف 12% خدمة + 14% ضريبة قيمة مضافة'
+    }}
+  </span>
+</div>
+</section>
+
+
+
+
+<!-- ieced deinks -->
+
+<section class="drinks-gallery py-5">
+  <div class="container">
+    <div class="row g-4">
+
+      <div class="col-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="gallery-card">
+          <img src="/BackGround/animations/154A3202.jpg" alt="Drink 1">
+        </div>
+      </div>
+
+
+      <div class="col-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="gallery-card">
+          <img src="/BackGround/animations/154A3149.jpg" alt="Drink 4">
+        </div>
+      </div>
+
+      <div class="col-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="gallery-card">
+          <img src="/BackGround/animations/IMG_0016.jpg" alt="Drink 3">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="iced-section py-5 mt-5" id="iced-drinks">
+  <div class="overlay"></div>
+  <img src="/BackGround/animations/IMG_0016.jpg" alt="Dessert Background" class="iced-bg" loading="lazy">
+
+  <div class="container">
+    <div class="iced-tagline text-center mb-4" style="color: #f1e6dd;">
+      {{ LanguageService.currentLang === 'en' ? 'Cool Down with Our Iced Drinks!' : 'استمتع بمشروباتنا المثلجة!' }}
+    </div>
+
+    <h2 class="text-center mb-4"><i class="me-2"></i>
+    {{ LanguageService.currentLang === 'en' ? 'Iced Drinks' : 'مشروبات مثلجة' }}
+  </h2>
+
+  <ul class="iced-list list-unstyled">
+    @for (iced of icedDrinks; track iced) {
+      <li>
+        <span>{{ LanguageService.currentLang === 'en' ? iced.nameEn : iced.nameAr }}</span>
+        <span>{{ LanguageService.currentLang === 'en' ? iced.priceEn : iced.priceAr }}</span>
+      </li>
+    }
+  </ul>
+</div>
+
+<div class="container tax">
+  <span>
+    {{ LanguageService.currentLang === 'en'
+    ? 'Add %12 service charge + % 14 value-added tax'
+    : 'يُضاف 12% خدمة + 14% ضريبة قيمة مضافة'
+    }}
+  </span>
+</div>
+</section>

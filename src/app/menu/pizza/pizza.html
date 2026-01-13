@@ -1,0 +1,51 @@
+<section class="pizza-section py-5 mb-3 mt-5" id="pizza">
+  <div class="overlay"></div>
+  <img src="/BackGround/IMG_2291.jpg" alt="Pizza Background" class="pizza-bg" loading="lazy">
+
+  <div class="container">
+
+    <h2 class="text-center mb-3">
+      {{ LanguageService.currentLang === 'en' ? 'Pizzas' : 'البيتزا' }}
+    </h2>
+
+    <p class="text-center" style="font-size: 22px;">
+      {{ LanguageService.currentLang === 'en'
+      ? 'Freshly baked pizzas loaded with flavor in every slice.'
+      : 'بيتزا طازة مليانة نكهة في كل قطعة.'
+      }}
+    </p>
+
+    <div class="row g-4 justify-content-center">
+
+      <!-- Pizza Item -->
+      @for (pizza of pizzas; track pizza) {
+        <div class="col-12 col-sm-6 col-lg-4 d-flex">
+          <div class="card border-2 menu-card">
+            <img [src]="pizza.img" class="card-img-top" [alt]="pizza.titleEn" loading="lazy">
+            <div class="card-body">
+              <h5 class="card-title">
+                {{ LanguageService.currentLang === 'en' ? pizza.titleEn : pizza.titleAr }}
+              </h5>
+              <p class="card-text">
+                {{ LanguageService.currentLang === 'en' ? pizza.descEn : pizza.descAr }}
+              </p>
+            </div>
+            <span class="price">
+              {{ LanguageService.currentLang === 'en' ? pizza.priceEn : pizza.priceAr }}
+            </span>
+          </div>
+        </div>
+      }
+
+    </div>
+  </div>
+
+  <div class="container tax">
+    <span>
+      {{ LanguageService.currentLang === 'en'
+      ? 'Add %12 service charge + %14 value-added tax'
+      : 'يُضاف 12% خدمة + 14% ضريبة قيمة مضافة'
+      }}
+    </span>
+  </div>
+</section>

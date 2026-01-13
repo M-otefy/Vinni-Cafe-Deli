@@ -1,0 +1,113 @@
+<!-- about.component.html -->
+<section class="about-vinni py-5" [dir]="LanguageService.currentLang === 'ar' ? 'rtl' : 'ltr'">
+  <div class="overlay"></div>
+  <div class="container">
+
+    <!-- Title -->
+    <h2 class="section-title mb-5 text-center">
+      {{ LanguageService.currentLang === 'en' ? 'Vinni Café & Deli' : 'كافيه فيني ودلي' }}
+    </h2>
+
+    <!-- Info Cards -->
+    <div class="row g-4 justify-content-center">
+      <div class="col-lg-4 col-md-6">
+        <div class="info-card p-4">
+          <h5>{{ LanguageService.currentLang === 'en' ? 'Established 2012' : 'تأسس ٢٠١٢' }}</h5>
+          <p>
+            {{ LanguageService.currentLang === 'en'
+            ? 'Vinni Café & Deli is a distinctive culinary spot in El Dokki, offering a cozy and welcoming atmosphere.'
+            : 'كافيه فيني ودلي هو مكان مميز لتجربة طعام فريدة في الدقي، يوفر أجواءً دافئة ومرحبة.' }}
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="info-card p-4">
+          <h5>{{ LanguageService.currentLang === 'en' ? 'Second Branch 2014' : 'الفرع الثاني ٢٠١٤' }}</h5>
+          <p>
+            {{ LanguageService.currentLang === 'en'
+            ? 'Located at Instituto Cervantes El Cairo, combining Oriental and Western flavors with authentic Egyptian touch.' : 'يقع في معهد ثربانتس القاهرة، يمزج بين النكهات الشرقية والغربية مع لمسة مصرية أصيلة.' }}
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="info-card p-4">
+          <h5>{{ LanguageService.currentLang === 'en' ? 'Open Daily' : 'مفتوح يومياً' }}</h5>
+          <p>
+            {{ LanguageService.currentLang === 'en'
+            ? 'From 8:30 AM to 2:00 AM, maintaining international standards in service and ambiance.'
+            : 'من الساعة ٨:٣٠ صباحاً حتى ٢:٠٠ صباحاً، ملتزم بمعايير الخدمة والأجواء العالمية.' }}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Icons -->
+    <div class="features d-flex flex-wrap justify-content-center mt-5 gap-4">
+      <div class="feature-item text-center">
+        <i class="fas fa-utensils"></i>
+        <p>{{ LanguageService.currentLang === 'en' ? 'Fusion Menu' : 'قائمة متنوعة' }}</p>
+      </div>
+      <div class="feature-item text-center">
+        <i class="fas fa-birthday-cake"></i>
+        <p>{{ LanguageService.currentLang === 'en' ? 'Catering Services' : 'خدمات تقديم الطعام' }}</p>
+      </div>
+      <div class="feature-item text-center">
+        <i class="fas fa-award"></i>
+        <p>{{ LanguageService.currentLang === 'en' ? 'Award Winning' : 'حائز على جوائز' }}</p>
+      </div>
+    </div>
+
+    <!-- Timeline Horizontal -->
+    <div class="timeline-horizontal mt-5">
+      <div class="timeline-point"><span>2012</span></div>
+      <div class="timeline-point"><span>2013</span></div>
+      <div class="timeline-point"><span>2014</span></div>
+      <div class="timeline-point"><span>2018</span></div>
+    </div>
+
+    <!-- About Text -->
+    <div class="col-12 mt-5">
+      <div class="about-card p-4">
+        <p>
+          {{ LanguageService.currentLang === 'en'
+          ? `Our story began in 2012 with a small restaurant and a big vision. Vinni officially opened its doors in
+          March 2013. We are located in a very distinctive place in El Dokki. The café is open seven days a week from
+          8:30 AM to 2 AM. As a member in CTE-Chamber of tourism establishments in Egypt, Vinni café has set the highest
+          level of international standards as the benchmark in its development. ...`
+          : `بدأت قصتنا في ٢٠١٢ مع مطعم صغير ورؤية كبيرة. افتتح فيني أبوابه رسميًا في مارس ٢٠١٣، ويقع في مكان مميز جدًا
+          بالدقي. المقهى مفتوح ٧ أيام في الأسبوع من الساعة ٨:٣٠ صباحًا حتى ٢ صباحًا. كعضو في غرفة منشآت السياحة في مصر،
+          وضع كافيه فيني أعلى مستويات المعايير الدولية كنموذج للتطوير. ...` }}
+        </p>
+      </div>
+    </div>
+
+    <!-- ====== TESTIMONIALS / REVIEWS ====== -->
+    <section class="reviews-section py-5">
+      <div class="container text-center">
+        <h2 class="section-title mb-5">
+          {{ LanguageService.currentLang === 'en' ? 'What Our Customers Say' : 'ماذا يقول عملاؤنا' }}
+        </h2>
+
+        <div class="reviews-carousel">
+          @for (review of reviews; track review) {
+            <div class="review-card">
+              <p>{{ LanguageService.currentLang === 'en' ? review.textEn : review.textAr }}</p>
+              <span>{{ review.author }}</span>
+            </div>
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="text-center mt-5">
+      <a routerLink="/menu" class="btn btn-cta">{{ LanguageService.currentLang === 'en' ? 'Explore Our Menu' : 'استكشف قائمتنا' }}</a>
+    </div>
+
+  </div>
+</section>
+
+
+<app-footer />

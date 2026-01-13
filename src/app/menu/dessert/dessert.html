@@ -1,0 +1,40 @@
+<section class="dessert-section py-5 mb-5 mt-5">
+  <div class="overlay"></div>
+  <img src="/dessert/slider-3.jpg" alt="Dessert Background" class="dessert-bg" loading="lazy">
+
+  <div class="container">
+    <div class="dessert-tagline text-center mb-3">
+      {{ LanguageService.currentLang === 'en' ? 'Treat Yourself with Something Sweet' : 'دلل نفسك بشيء حلو' }}
+    </div>
+
+    <h2 class="dessert-title text-center mb-4">
+      <i class="fas fa-ice-cream me-2"></i> {{ LanguageService.currentLang === 'en' ? 'Dessert' : 'حلويات' }}
+    </h2>
+
+    <ul class="dessert-list list-unstyled">
+      @for (dessert of desserts; track dessert) {
+        <li>
+          <span class="name">
+            {{ LanguageService.currentLang === 'en' ? dessert.nameEn : dessert.nameAr }}
+            @if (LanguageService.currentLang === 'en' && dessert.detailsEn) {
+              <small>({{ dessert.detailsEn }})</small>
+            }
+            @if (LanguageService.currentLang === 'ar' && dessert.detailsAr) {
+              <small>({{ dessert.detailsAr }})</small>
+            }
+          </span>
+          <span class="price">{{ LanguageService.currentLang === 'en' ? dessert.priceEn : dessert.priceAr }}</span>
+        </li>
+      }
+    </ul>
+  </div>
+
+  <div class="container tax">
+    <span>
+      {{ LanguageService.currentLang === 'en'
+      ? 'Add %12 service charge + % 14 value-added tax'
+      : 'يُضاف 12% خدمة + 14% ضريبة قيمة مضافة'
+      }}
+    </span>
+  </div>
+</section>

@@ -1,0 +1,62 @@
+<section class="sandwich-section py-5 mb-3 mt-5" id="sandwiches">
+  <div class="overlay"></div>
+  <img src="/BackGround/Vinne Rest 2025 (5).jpg" alt="Sandwich Background" class="sandwich-bg" loading="lazy">
+
+  <div class="container">
+
+    <h2 class="text-center mb-3">
+      {{ LanguageService.currentLang === 'en' ? 'Sandwiches' : 'السندوتشات' }}
+    </h2>
+
+    <p class="text-center" style="font-size: 22px;">
+      {{ LanguageService.currentLang === 'en'
+      ? 'Our sandwiches are done right — stuffed to the brim with more goodies than your hungry self can handle.'
+      : 'سندوتشاتنا معمولة صح — مليانة حشوات أكتر مما تتخيل.'
+      }}
+    </p>
+
+    <div class="row justify-content-center g-4">
+
+      <!-- Sandwich Item -->
+      @for (sandwich of sandwiches; track sandwich) {
+        <div class="col-sm-12 col-md-6 col-lg-6 mb-5 d-flex">
+          <div class="card border-2 menu-card">
+            <img [src]="sandwich.img" [alt]="sandwich.titleEn" loading="lazy">
+            <div class="card-body">
+              <h5>
+                {{ LanguageService.currentLang === 'en' ? sandwich.titleEn : sandwich.titleAr }}
+              </h5>
+              <p>
+                {{ LanguageService.currentLang === 'en' ? sandwich.descEn : sandwich.descAr }}
+              </p>
+            </div>
+            <!-- Prices -->
+            @if (sandwich.singleEn && sandwich.doubleAr) {
+              <div class="d-flex align-items-center justify-content-between px-3 pb-3"
+                >
+                <span class="price">
+                  {{ LanguageService.currentLang === 'en' ? sandwich.singleEn : sandwich.singleAr }}
+                  /
+                  {{ LanguageService.currentLang === 'en' ? sandwich.doubleEn : sandwich.doubleAr }}
+                </span>
+              </div>
+            }
+            <span class="price">
+              {{ LanguageService.currentLang === 'en' ? sandwich.priceEn : sandwich.priceAr }}
+            </span>
+          </div>
+        </div>
+      }
+
+    </div>
+  </div>
+
+  <div class="container tax">
+    <span>
+      {{ LanguageService.currentLang === 'en'
+      ? 'Add %12 service charge + %14 value-added tax'
+      : 'يُضاف 12% خدمة + 14% ضريبة قيمة مضافة'
+      }}
+    </span>
+  </div>
+</section>

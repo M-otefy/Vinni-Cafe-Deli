@@ -1,0 +1,92 @@
+.hero-items-section {
+  position: relative;
+  background: url("/baners/Banner.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.hero-items-section .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+}
+
+.content-box {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.hero-desc {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.items-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.item-card {
+  background: rgba(255,255,255,0.12);
+  border-radius: 20px;
+  padding: 20px;
+  border: 1px solid rgba(146, 142, 142, 0.77);
+  backdrop-filter: blur(8px);
+  width: 220px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  color: #fff;
+}
+
+.item-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.item-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  transition: transform 0.3s;
+}
+
+.item-card img:hover {
+  transform: scale(1.04);
+}
+
+.item-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #e49425;
+  margin-bottom: 8px;
+}
+
+.item-desc {
+  font-size: 0.9rem;
+  color: #fff;
+  line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .item-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 576px) {
+  .item-card {
+    width: 90%;
+  }
+}

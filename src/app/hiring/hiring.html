@@ -1,0 +1,77 @@
+<section class="apply-form-section" [ngClass]="{'rtl': LanguageService.currentLang==='ar'}">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="form-box">
+
+      <h2 class="text-center mb-3">
+        {{ LanguageService.currentLang==='en' ? 'Join Our Team' : 'انضم إلى فريقنا' }}
+      </h2>
+
+      <p class="text-center mb-4">
+        {{ LanguageService.currentLang==='en'
+        ? 'Fill in the form below and we’ll contact you soon.'
+        : 'املأ النموذج أدناه وسنتواصل معك قريبًا.' }}
+      </p>
+
+      <form [formGroup]="applyForm" (ngSubmit)="submitForm()">
+
+        <!-- Name -->
+        <div class="mb-3">
+          <label>{{ getLabel('name') }}</label>
+          <input type="text" class="form-control" formControlName="name">
+          <small class="text-danger" *ngIf="submitted && applyForm.get('name')?.errors">
+            {{ getLabel('nameError') }}
+          </small>
+        </div>
+
+        <!-- Phone -->
+        <div class="mb-3">
+          <label>{{ getLabel('phone') }}</label>
+          <input type="tel" class="form-control" placeholder="01XXXXXXXXX" formControlName="phone">
+          <small class="text-danger" *ngIf="submitted && applyForm.get('phone')?.errors">
+            {{ getLabel('phoneError') }}
+          </small>
+        </div>
+
+        <!-- Position -->
+        <div class="mb-3">
+          <label>{{ getLabel('position') }}</label>
+          <select class="form-control" formControlName="position">
+            <option value="">{{ getLabel('selectPosition') }}</option>
+            <option *ngFor="let pos of positions" [ngValue]="pos">
+              {{ getCurrentPositionName(pos) }}
+            </option>
+          </select>
+          <small class="text-danger" *ngIf="submitted && applyForm.get('position')?.errors">
+            {{ getLabel('positionError') }}
+          </small>
+        </div>
+
+        <!-- CV Upload -->
+        <div class="mb-3">
+          <label>{{ getLabel('cv') }}</label>
+          <input type="file" class="form-control" (change)="onCvSelected($event)">
+          <small class="text-muted" *ngIf="cvName">{{ cvName }}</small>
+          <small class="text-danger" *ngIf="submitted && applyForm.get('cv')?.errors">
+            {{ getLabel('cvError') }}
+          </small>
+        </div>
+
+        <!-- Button -->
+        <div class="text-center">
+          <button type="submit" class="btn-apply">
+            {{ getLabel('submit') }}
+          </button>
+        </div>
+
+        <!-- Success -->
+        <p class="success-msg text-success mt-3" *ngIf="successMessage">
+          {{ successMessage }}
+        </p>
+
+      </form>
+    </div>
+  </div>
+</section>
+
+<app-footer />

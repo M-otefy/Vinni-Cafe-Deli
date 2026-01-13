@@ -1,0 +1,189 @@
+/* ===== ABOUT SECTION ===== */
+.about-vinni {
+  position: relative;
+  background: url("/baners/banner(2).jpg") center/cover no-repeat;
+  padding: 80px 20px;
+  color: #fff;
+}
+
+.about-vinni .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.about-vinni .container {
+  position: relative;
+  z-index: 2;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #ff4d4d;
+  margin-bottom: 50px;
+}
+
+/* ===== INFO CARDS ===== */
+.info-card {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.info-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+.about-card {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.about-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.info-card h5 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #ff4d4d;
+}
+
+.info-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #fff;
+}
+
+/* ===== FEATURES ===== */
+.features .feature-item {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  padding: 25px 20px;
+  border-radius: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.features .feature-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.features i {
+  font-size: 2rem;
+  color: #ff4d4d;
+  margin-bottom: 10px;
+}
+
+.features p {
+  margin: 0;
+  font-weight: 600;
+}
+
+/* ===== TIMELINE ===== */
+.timeline-horizontal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.timeline-point {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #ff4d4d;
+  position: relative;
+}
+
+.timeline-point::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.3);
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+}
+
+.timeline-point:last-child::after {
+  display: none;
+}
+
+/* ===== REVIEWS / TESTIMONIALS ===== */
+.reviews-section {
+  padding: 60px 0;
+}
+
+.reviews-carousel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 20px;
+}
+
+.review-card {
+  flex: 0 0 300px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 25px;
+  scroll-snap-align: start;
+  color: #fff;
+  font-style: italic;
+  transition: transform 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== CTA BUTTON ===== */
+.btn-cta {
+  background: #ff4d4d;
+  color: #fff;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.btn-cta:hover {
+  background: #b32424;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+  .timeline-horizontal {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .timeline-point::after {
+    width: 3px;
+    height: 60px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

@@ -1,0 +1,35 @@
+<section class="shisha-section">
+  <div class="overlay"></div>
+  <img src="/BackGround/Gemini_Generated_Image_iv5pp2iv5pp2iv5p.png" alt="Shisha" class="shisha-bg" loading="lazy">
+
+  <div class="container">
+    <h2 class="drink-title text-center">
+      {{ LanguageService.currentLang === 'en' ? 'Shisha & Salom' : 'شيشة ' }}
+    </h2>
+
+    <div class="drink-list">
+      @for (shisha of shishaList; track shisha; let last = $last) {
+        <div class="drink-item">
+          <span class="drink-name">
+            {{ LanguageService.currentLang === 'en' ? shisha.nameEn : shisha.nameAr }}
+          </span>
+          <span class="drink-price">
+            {{ LanguageService.currentLang === 'en' ? shisha.priceEn : shisha.priceAr }}
+          </span>
+        </div>
+        @if (!last) {
+          <span class="drink-line"></span>
+        }
+      }
+    </div>
+  </div>
+
+  <div class="container tax">
+    <span>
+      {{ LanguageService.currentLang === 'en'
+      ? 'Add %12 service charge + % 14 value-added tax'
+      : 'يُضاف 12% خدمة + 14% ضريبة قيمة مضافة'
+      }}
+    </span>
+  </div>
+</section>

@@ -1,0 +1,70 @@
+<footer class="footer py-4 mt-3 bg-dark text-light">
+  <div class="container">
+
+    <div class="row text-center text-md-start">
+
+      <!-- Logo + About -->
+      <div class="col-md-4 mb-4">
+        <h3 class="footer-logo">Vinni Café & Deli</h3>
+        <p class="footer-text">
+          {{ LanguageService.currentLang === 'en'
+          ? 'Delicious food, cozy vibes. Visit us for an unforgettable experience.'
+          : 'طعام لذيذ وأجواء مريحة. زورونا لتجربة لا تُنسى.' }}
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-4 mb-4">
+        <h5 class="footer-title">{{ LanguageService.currentLang === 'en' ? 'Quick Links' : 'روابط سريعة' }}</h5>
+        <ul class="footer-links list-unstyled">
+          <li><a routerLink="/home" class="text-light text-decoration-none">{{ LanguageService.currentLang === 'en' ?
+              'Home' : 'الرئيسية' }}</a></li>
+          <li><a routerLink="/menu" class="text-light text-decoration-none">{{ LanguageService.currentLang === 'en' ?
+              'Menu' : 'القائمة' }}</a></li>
+          <li><a routerLink="/about" class="text-light text-decoration-none">{{ LanguageService.currentLang === 'en' ?
+              'About' : 'من نحن' }}</a></li>
+          <li><a routerLink="/contact" class="text-light text-decoration-none">{{ LanguageService.currentLang === 'en' ?
+              'Contact' : 'اتصل بنا' }}</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-4 mb-4">
+        <h5 class="footer-title">{{ LanguageService.currentLang === 'en' ? 'Contact' : 'تواصل معنا' }}</h5>
+        <p class="footer-text">
+          📍 <a href="https://www.google.com/maps/place/123+Main+Street+Cairo/" target="_blank"
+            class="map-link text-light text-decoration-none">
+            {{ LanguageService.currentLang === 'en'
+            ? '22 Hendawi Street From Vinni Square, Cairo'
+            : '٢٢ شارع هندوي من ميدان فيني، القاهرة' }}
+          </a>
+        </p>
+        <p class="footer-text">
+          📞 <a href="tel:01012345678" class="phone-link text-light text-decoration-none">012-1055-2055</a>
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Social Icons -->
+    <div class="social-icons text-center mb-3">
+      <a href="https://www.facebook.com/vinnicafe" target="_blank" class="text-light mx-2"><i
+          class="bi bi-facebook"></i></a>
+      <a href="https://www.instagram.com/vinni_cafe/" target="_blank" class="text-light mx-2"><i
+          class="bi bi-instagram"></i></a>
+      <a href="https://wa.me/201210552055" target="_blank" class="text-light mx-2"><i class="bi bi-whatsapp"></i></a>
+      <a href="https://www.tripadvisor.com/Restaurant_Review-g294202-d7126013-Reviews-Vinni_Cafe_Deli-Giza_Giza_Governorate.html"
+        target="_blank" class="text-light mx-2"><i class="bi bi-foursquare"></i> Tripadvisor</a>
+    </div>
+
+    <!-- Copyright + Designer -->
+    <div class="text-center mt-3 copy-text">
+      © 2014 Vinni Cafe & Deli | {{ LanguageService.currentLang === 'en' ? 'Created by' : 'تم الإنشاء بواسطة' }}
+      <a href="https://www.linkedin.com/in/mahmoud-otefy-b3524933a" target="_blank"
+        class="text-light text-decoration-none">
+        Mahmoud Otefy
+      </a>
+    </div>
+
+  </div>
+</footer>

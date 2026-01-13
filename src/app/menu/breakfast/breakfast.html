@@ -1,0 +1,42 @@
+<section class="breakfast-section py-5 mb-3" id="breakfast">
+  <div class="overlay"></div>
+  <img src="/BackGround/11.png" alt="Dessert Background" class="breakfast-bg" loading="lazy">
+
+  <div class="container">
+    <!-- زرار تبديل اللغة -->
+    <!-- <div class="text-end mb-3">
+    <button class="btn btn-secondary" (click)="langService.toggleLanguage()">
+      {{ langService.currentLang === 'en' ? 'عربي' : 'English' }}
+    </button>
+  </div> -->
+
+  <h2 class="text-center mb-5">
+    {{ langService.currentLang === 'en' ? 'Breakfast & Omelets' : 'الفطور والأومليت' }}
+  </h2>
+
+  <p class="text-center" style="font-size: 22px;">
+    {{ langService.currentLang === 'en'? "Because you can't live a full life on an empty stomach, Vinni serves you a breakfast that fulfills you both physically & emotionally.": "لأنك لا تستطيع عيش حياة كاملة على معدة فارغة، يقدم فيني فطورًا يشبع جسمك وروحك." }}
+  </p>
+
+  <div class="row g-4">
+    @for (dish of dishes; track dish) {
+      <div class="col-12 col-md-12 col-lg-4 d-flex">
+        <div class="card border-2 menu-card">
+          <img [src]="dish.img" class="card-img-top" [alt]="dish[langService.currentLang].title" loading="lazy">
+          <div class="card-body">
+            <h5 class="card-title">{{ dish[langService.currentLang].title }}</h5>
+            <p class="card-text">{{ dish[langService.currentLang].desc }}</p>
+          </div>
+          <span class="price" style="font-weight:700;">{{ dish[langService.currentLang].price }}</span>
+        </div>
+      </div>
+    }
+  </div>
+</div>
+
+<div class="container tax">
+  <span>
+    {{ langService.currentLang === 'en' ? "Add %12 service charge + %14 value-added tax" : "إضافة 12٪ رسوم خدمة + 14٪ ضريبة القيمة المضافة" }}
+  </span>
+</div>
+</section>

@@ -1,0 +1,69 @@
+<section class="pasta-section py-5 mb-3 mt-5">
+  <div class="overlay"></div>
+  <img src="/BackGround/154A3442.jpg" alt="Pasta Background" class="pasta-bg" loading="lazy">
+
+  <div class="container">
+
+    <h2 class="text-center mb-3 pasta-title">
+      {{ LanguageService.currentLang === 'en' ? 'Pastas' : 'الباستا' }}
+    </h2>
+
+    <p class="text-center" style="font-size: 22px;">
+      {{ LanguageService.currentLang === 'en'
+      ? 'We combine the freshest and highest quality ingredients to create authentic flavored pasta.'
+      : 'نمزج أجود وأطازج المكونات لنقدّم باستا بنكهات أصلية.'
+      }}
+    </p>
+
+    <div class="row justify-content-center g-4">
+
+      <!-- Pasta Item -->
+      @for (pasta of pastas; track pasta) {
+      <div class="col-sm-12 col-md-6 col-lg-4 mb-5 d-flex">
+        <div class="card border-2 menu-card">
+          <img [src]="pasta.img" [alt]="pasta.titleEn" loading="lazy">
+          <div class="card-body">
+            <h5 class="card-title">
+              {{ LanguageService.currentLang === 'en' ? pasta.titleEn : pasta.titleAr }}
+            </h5>
+            <p>
+              {{ LanguageService.currentLang === 'en' ? pasta.descEn : pasta.descAr }}
+            </p>
+          </div>
+          <span class="price">
+            {{ LanguageService.currentLang === 'en' ? pasta.priceEn : pasta.priceAr }}
+          </span>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+  <div class="addons container py-5">
+    <h4>
+      {{ LanguageService.currentLang === 'en' ? 'Add-ons' : 'إضافات' }}
+    </h4>
+
+    <div class="row g-4">
+      @for (add of addons; track add) {
+      <div class="col-4">
+        <div class="addon-item text-center">
+          <img [src]="add.img">
+          <h6>
+            {{ LanguageService.currentLang === 'en' ? add.titleEn : add.titleAr }}
+          </h6>
+          <span class="price">{{ LanguageService.currentLang === 'en' ? add.priceEn : add.priceAr }}</span>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+
+  <div class="container tax">
+    <span>
+      {{ LanguageService.currentLang === 'en'
+      ? 'Add %12 service charge + %14 value-added tax'
+      : 'يُضاف 12% خدمة + 14% ضريبة قيمة مضافة'
+      }}
+    </span>
+  </div>
+</section>

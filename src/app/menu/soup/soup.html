@@ -1,0 +1,55 @@
+<section class="soup-section py-5 mb-3 mt-5" id="soups">
+  <div class="overlay"></div>
+  <img src="/BackGround/chicken.png" alt="Dessert Background" class="soup-bg" loading="lazy">
+
+  <div class="container">
+    <h2 class="text-center mb-4">
+      {{ langService.currentLang ==='en'? 'Soups' : 'الشوربات' }}
+    </h2>
+
+    <div class="row g-4">
+      @for (soup of soups; track soup) {
+        <div class="col-12 col-sm-6 col-lg-4 d-flex">
+          <div class="card border-2 menu-card">
+            <img [src]="soup.img" class="card-img-top" [alt]="langService.currentLang ? soup.titleEn : soup.titleAr"
+              loading="lazy">
+              <div class="card-body">
+                <h5 class="card-title">{{ langService.currentLang==='en' ? soup.titleEn : soup.titleAr }}</h5>
+                <p class="card-text">{{ langService.currentLang==='en' ? soup.descEn : soup.descAr }}</p>
+              </div>
+              <span class="price">
+                {{ langService.currentLang === 'en' ? soup.priceEn : soup.priceAr }}
+              </span>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+
+    <!-- Add-ons -->
+    <div class="addons container py-5">
+      <h4>{{ langService.currentLang==='en' ? 'Add-ons' : 'إضافات' }}</h4>
+      <div class="row g-4">
+        @for (add of addons; track add) {
+          <div class="col-4">
+            <div class="addon-item text-center">
+              <img [src]="add.img" [alt]="langService.currentLang ? add.titleEn : add.titleAr">
+              <h6>{{ langService.currentLang==='en' ? add.titleEn : add.titleAr }}</h6>
+              <span class="price">
+                {{ langService.currentLang==='en' ? add.priceEn : add.priceAr }}
+              </span>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+
+    <div class="container tax">
+      <span>
+        {{ langService.currentLang
+        ? "Add %12 service charge + % 14 value-added tax"
+        : "أضف 12% رسوم خدمة + 14% ضريبة القيمة المضافة"
+        }}
+      </span>
+    </div>
+  </section>

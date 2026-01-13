@@ -1,0 +1,147 @@
+.menu-hero {
+  /* margin-top: 80px; */
+  position: relative;
+  /* height: 80vh; */
+  background: url("/Sandwich/154A3717.jpg") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.3));
+    z-index: 1;
+  }
+}
+
+.content-box {
+  z-index: 2;
+}
+
+/* Glass Box */
+.glass-box {
+  /* margin-top: 80px; */
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  padding: 35px 50px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  max-width: 600px;
+}
+
+/* Title underline animation */
+.title {
+  color: #fcf5eb;
+  font-size: 3rem;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background: #fcf5eb;
+  animation: underline 0.8s ease forwards;
+  animation-delay: 0.4s;
+}
+
+@keyframes underline {
+  to {
+    width: 60%;
+  }
+}
+
+/* Subtitle */
+.subtitle {
+  margin-top: 20px;
+  color: #fcf5eb;
+  font-size: 1.2rem;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  margin-top: 15px;
+  color: #fcf5eb;
+  font-size: 0.95rem;
+
+  a {
+    color: #fcf5eb;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* Fade-Up Animation */
+.fade-up {
+  opacity: 0;
+  transform: translateY(25px);
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.hero-buttons .btn {
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: 400;
+  transition: 0.3s;
+}
+
+/* الألوان */
+.btn-primary {
+  background-color: #ff4d4d;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #fff;
+  transform: translateY(-2px);
+  color: #111;
+}
+
+.btn-secondary {
+  background-color: #ff4d4d;
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: #ff4d4d;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .hero-buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .hero-buttons .btn {
+    flex: 1 1 45%;
+    text-align: center;
+  }
+}

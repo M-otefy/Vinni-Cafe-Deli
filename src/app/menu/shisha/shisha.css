@@ -1,0 +1,93 @@
+.shisha-section {
+  position: relative;
+  padding: 60px 0;
+}
+.shisha-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.shisha-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.shisha-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.shisha-section .drink-title {
+  color: #ed2127;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 32px;
+}
+
+.shisha-section .drink-list {
+  max-width: 850px;
+  margin: auto;
+}
+
+.shisha-section .drink-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 22px;
+  padding: 6px 0;
+  animation: fadeUp 0.5s ease both;
+}
+
+.shisha-section .drink-name {
+  flex: 1;
+  color: #f1e6dd;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+
+.shisha-section .drink-line {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  /* padding: 12px 0; */
+  font-size: 18px;
+}
+
+.shisha-section .drink-price {
+  color: #f1e6dd;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  white-space: nowrap;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.tax {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.tax span {
+  font-size: 14px;
+  color: #fff;
+  font-weight: 600;
+}

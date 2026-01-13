@@ -1,0 +1,35 @@
+<section class="menu-hero d-flex align-items-center justify-content-center text-center mb-5 py-5">
+  <div class="overlay"></div>
+  <div class="glass-box fade-up content-box">
+    <h1 class="title">{{ getLabel('title') }}</h1>
+    <p class="subtitle fade-up" style="animation-delay: 0.2s;">{{ getLabel('subtitle') }}</p>
+
+    <div class="hero-buttons mt-3">
+      <button class="btn btn-primary me-2" (click)="scrollTo('menu')">{{ getLabel('fullMenu') }}</button>
+      <button class="btn btn-primary me-2" (click)="scrollTo('drinks')">{{ getLabel('drinks') }}</button>
+      <button class="btn btn-primary me-2" (click)="scrollTo('breakfast')">{{ getLabel('breakfast') }}</button>
+      <button class="btn btn-primary me-2" (click)="scrollTo('salad')">{{ getLabel('salad') }}</button>
+      <button class="btn btn-primary me-2" (click)="scrollTo('soup')">{{ getLabel('soup') }}</button>
+      <button class="btn btn-primary me-2" (click)="scrollTo('appetizers')">{{ getLabel('appetizers') }}</button>
+      <button class="btn btn-primary me-2" (click)="scrollTo('pasta')">{{ getLabel('pasta') }}</button>
+      <button class="btn btn-primary me-2" (click)="scrollTo('pizza')">{{ getLabel('pizza') }}</button>
+      <button class="btn btn-primary me-2" (click)="scrollTo('main-course')">{{ getLabel('mainCourse') }}</button>
+      <button class="btn btn-primary me-2" (click)="scrollTo('sandwich')">{{ getLabel('sandwich') }}</button>
+      <button class="btn btn-primary me-2" (click)="scrollTo('dessert')">{{ getLabel('dessert') }}</button>
+      <button class="btn btn-primary me-2" (click)="scrollTo('shisha')">{{ getLabel('shisha') }}</button>
+    </div>
+  </div>
+</section>
+
+
+<app-breakfast id="breakfast"></app-breakfast>
+<app-salad id="salad"></app-salad>
+<app-soup id="soup"></app-soup>
+<app-appetizer id="appetizers"></app-appetizer>
+<app-pizza id="pizza"></app-pizza>
+<app-pasta id="pasta"></app-pasta>
+<app-sandwichs id="sandwich"></app-sandwichs>
+<app-main-course id="main-course"></app-main-course>
+<app-drinks id="drinks"></app-drinks>
+<app-dessert id="dessert"></app-dessert>
+<app-shisha id="shisha"></app-shisha>

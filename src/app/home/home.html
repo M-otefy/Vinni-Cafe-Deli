@@ -1,0 +1,44 @@
+<!-- ====== HERO + ITEMS CENTERED ====== -->
+<!-- ====== HERO + ITEMS CENTERED ====== -->
+<section class="hero-items-section mt-3">
+  <div class="overlay"></div>
+
+  <div class="container text-center content-box">
+    <h1 class="hero-title">
+      {{ LanguageService.currentLang === 'en' ? 'Welcome to' : 'مرحبا بكم في' }}
+      <img src="/baners/logo - Cut 06-12-2025.png" alt="Vinni Café & Deli" width="200">
+    </h1>
+    <p class="hero-desc">
+      {{ LanguageService.currentLang === 'en'
+      ? 'At Vinni Café & Deli, every dish tells a story. From freshly roasted coffee beans to carefully crafted meals,
+      we believe in serving food made with passion, love, and attention to detail. Step in, relax, and let us take care
+      of your taste buds.'
+      : 'في Vinni Café & Deli، كل طبق يروي قصة. من حبوب القهوة المحمصة الطازجة إلى الوجبات المعدة بعناية، نحن نؤمن
+      بتقديم طعام مصنوع بالشغف والحب والاهتمام بالتفاصيل. تفضل بالجلوس ودعنا نعتني بحاسة التذوق لديك.' }}
+    </p>
+
+    <div class="text-center mb-4 mt-5">
+      <h2 class="section-title">{{ LanguageService.currentLang === 'en' ? 'Best Selling Dishes' : 'الأطباق الأكثر
+      مبيعاً' }}</h2>
+      <p class="section-desc">
+        {{ LanguageService.currentLang === 'en'
+        ? 'Our customers’ all-time favorites — freshly prepared, full of flavor, and crafted with care at Vinni Café &
+        Deli.'
+        : 'الأطباق المفضلة لدى زبائننا دائماً — معدة طازة، مليئة بالنكهات ومعدة بعناية في Vinni Café & Deli.' }}
+      </p>
+    </div>
+
+    <div class="d-flex flex-wrap justify-content-center mt-4 gap-3">
+      @for (item of bestSellingDishes; track item) {
+        <div class="item-card">
+          <img [src]="item.img" [alt]="LanguageService.currentLang === 'en' ? item.titleEn : item.titleAr">
+          <h4 class="item-title">{{ LanguageService.currentLang === 'en' ? item.titleEn : item.titleAr }}</h4>
+          <p class="item-desc">{{ LanguageService.currentLang === 'en' ? item.descEn : item.descAr }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+
+<app-footer />

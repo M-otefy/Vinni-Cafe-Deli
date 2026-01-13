@@ -1,0 +1,93 @@
+.maincourse-section {
+  position: relative;
+  padding: 60px 0;
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  h2 {
+    color: #ed2127;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    font-size: 32px;
+  }
+  h3 {
+    color: #e49425;
+    font-family: "Fredoka One", cursive;
+    font-weight: 700;
+    font-size: 32px;
+  }
+
+  p {
+    font-size: 16px;
+    color: #fff;
+  }
+  span {
+    color: #e49425;
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+.maincourse-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.menu-card {
+  background: transparent;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-top: 30px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  padding: 35px 50px;
+  border-radius: 20px;
+  border: 1px solid rgba(146, 142, 142, 0.77);
+  max-width: 600px;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+.menu-card img {
+  transition: transform 0.3s;
+}
+
+.menu-card:hover img {
+  transform: scale(1.05);
+}
+.tax {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.tax span {
+  font-size: 14px;
+  color: #fff;
+  font-weight: 600;
+}
+.maincourse-section h5 {
+  color: #e49425;
+  font-size: 16px;
+  font-weight: 600;
+}
